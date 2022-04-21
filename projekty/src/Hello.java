@@ -1,10 +1,60 @@
 import com.sun.xml.internal.ws.commons.xmlutil.Converter;
-
+import java.io.*;
 import java.util.*;
 
 class Hello {
     public static void main(String[] args) {
-        zadanie5();
+        //zadanie5();
+      /*  try {
+        FileWriter x = new FileWriter("des.txt");
+        x.write("Testowy marc");
+        x.close();
+        }
+        catch(IOException e)
+        {
+        System.out.println("An error ocurred :(");
+        e.printStackTrace();
+        }
+        try {
+            File dd = new File("des.txt");
+            Scanner scan = new Scanner(dd);
+            while(scan.hasNextLine())
+            {
+                String data = scan.nextLine();
+                System.out.println(data);
+            }
+
+        }
+        catch(IOException e)
+        {
+            System.out.println("An error ocurred :(");
+            e.printStackTrace();
+        }*/
+        Slowa test = new Slowa();
+        File dd = new File("des.txt");
+        int licznik = 0, liczniktrim = 0, licznikslow = 0;
+        try {
+            String data = "";
+            Scanner scan = new Scanner(dd);
+            while(scan.hasNextLine())
+            {
+                data = scan.nextLine();
+                System.out.println(data);
+                licznik += data.length();
+                liczniktrim += test.liczBialeZnaki(data);
+                licznikslow += test.liczSlowa(data.trim());
+
+
+            }
+            System.out.println("W pliku jest " +licznik + " znakow");
+
+            System.out.println("W pliku jest " + (liczniktrim) + " bialych znakow");
+
+            System.out.println("W pliku jest " + (licznikslow) + " slow");
+        }
+        catch(IOException e) {
+
+        }
 
 
     }

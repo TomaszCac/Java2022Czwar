@@ -1,3 +1,4 @@
+/*
 import java.io.FileNotFoundException;
 //import java.io.PrintWriter;
 import java.io.File;
@@ -24,3 +25,4 @@ public class Odczyt {
         System.out.println(zdanie);
     }
 }
+*/
